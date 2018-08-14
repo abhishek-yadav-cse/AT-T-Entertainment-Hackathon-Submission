@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<title>Headline Prediction App</title>
+
+<head>
+    <script src="./static/htmldiff.js"></script>
+    <script src="./static/compare.js"></script>
+    <link rel="stylesheet" href="./static/style.css">
+
+</head>
+<body>
+    <br><br><br><br><br><br>
+
+
+<center>
+<h2>Happy News</h2>
+<!-- <p id="original" align="left"> "{{entered_sentence[0]}}"!</p> -->
+<p id="original" align="left"> "{{mystring}}"!</p>
+<p id="changed" align="left">"{{sheen_string}}"! </p>
+
+<script>   
+
+console.log("hi");
+
+
+// Show HTML diff output as HTML (crazy right?)!
+originalHTML = document.getElementById("original").innerHTML;
+newHTML = document.getElementById("changed").innerHTML;
+
+// Diff HTML strings
+let output = htmldiff(originalHTML, newHTML);
+
+document.getElementById("changed").innerHTML = output;
+document.getElementById("original").innerHTML = '';
+console.log("function");
+
+
+</script>
+
+
+
+
+
+
+</center>
+
+</body>
+</html>
